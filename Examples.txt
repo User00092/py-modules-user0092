@@ -1,0 +1,19 @@
+# Settings.userfiles
+
+# Example 1:
+category:[bravo]:data:
+debug = True
+load_on_start = True
+profile_on_start = main
+
+category:[settings]:data:
+debug=True
+load_on_start=True
+profile_on_start=main
+
+
+# Example 2:
+category:[default]:data:
+C:\Users\rhine\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk
+C:\Program Files\Adobe\Adobe Audition 2022\Adobe Audition.exe
+C:\Users\rhine\AppData\Roaming\Spotify\Spotify.exe
