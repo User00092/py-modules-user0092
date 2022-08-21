@@ -1,10 +1,8 @@
-# Settings.userfiles
-
 # Example 1:
+
+# Settings.userfiles
 category:[bravo]:data:
-debug = True
-load_on_start = True
-profile_on_start = main
+debug = False
 
 category:[settings]:data:
 debug=True
@@ -12,8 +10,26 @@ load_on_start=True
 profile_on_start=main
 
 
+# main.py
+import userfiles
+userfiles = userfiles.userfiles
+
+userfiles.read("Path/to/file/Settings.userfiles")
+debug = userfiles.get('settings', 'debug')
+
+
+
 # Example 2:
+
+# Settings.userfiles
 category:[default]:data:
 C:\Users\rhine\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk
 C:\Program Files\Adobe\Adobe Audition 2022\Adobe Audition.exe
 C:\Users\rhine\AppData\Roaming\Spotify\Spotify.exe
+
+# main.py
+import userfiles
+userfiles = userfiles.userfiles
+
+userfiles.read("Path/to/file/Settings.userfiles")
+userfiles.get_category_items('default')
