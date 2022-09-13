@@ -115,12 +115,19 @@ def edit_value(id_, item_, to_value_):
                     new_string += f"\ncategory:[{id_}]:data:\n"
                     for index, line in enumerate(cat_data):
                         line = str(line).replace("\n", "")
-                        if item_ == line:
-                            new_string += f"{to_value_}\n"
-                            
+                        if not "=" in line:
+                            if item_ == line:
+                                new_string += f"{to_value_}\n"
+                                
+                            else:
+                                new_string += f"{line}\n"
+                                
                         else:
-                            new_string += f"{line}\n"
-                        
+                            log = line.split("=")
+                            if log[0][:-1] == item_ or log[0] == item_:
+                                new_string += f"{item_} = {to_value_}\n"
+                            else:
+                                new_string += f"{line}\n"
                 else:
                     cat_data = get_category_items(cat.replace("[","").replace("]",""))
                     new_string += f"\ncategory:{cat}:data:\n"
@@ -209,11 +216,9 @@ def get(id_, item_):
         
         for i in cat_data:
             log = i.split("=")
-            if log[0][-1] == " ":
-                log[0] = log[0][:-1]
-            if log[0] == item_:
-                if log[1][0] == " ":
-                    return log[1][1:]
+            if log[0] == item_ or log[0][:-1] == item_:
+                if log[1] == " " or log[1] == "":
+                    return ""
                 else:
                     return log[1]
         
