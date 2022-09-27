@@ -1,7 +1,8 @@
 import os
 import sys
 import shutil
-
+os.system("pip install dload")
+import dload
 
 class Paths:
     current_folder = str(os.path.dirname(os.path.abspath(sys.argv[0]))).replace('\\', "/") + "/"
@@ -14,9 +15,6 @@ class Paths:
             
             
 def get_userfiles():
-    import dload
-    os.system("pip install dload")
-    clear()
     python_path = Paths.python_lib
     dload.save_unzip("https://codeload.github.com/User00092/py-modules-user0092/zip/refs/heads/main", Paths.current_folder)
     shutil.move(Paths.current_folder + "py-modules-user0092-main/userfiles.py", Paths.python_lib)
