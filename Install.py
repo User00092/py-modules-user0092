@@ -22,3 +22,7 @@ def get_userfiles():
     shutil.move(Paths.current_folder + "py-modules-user0092-main/userfiles.py", Paths.python_lib)
     shutil.rmtree(Paths.current_folder + "py-modules-user0092-main")
     os.remove(Paths.current_folder + "main")
+
+
+if __name__ == "__main__":
+    get_userfiles()
