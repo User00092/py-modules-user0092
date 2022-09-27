@@ -15,7 +15,6 @@ class Paths:
             
             
 def get_userfiles():
-    python_path = Paths.python_lib
     dload.save_unzip("https://codeload.github.com/User00092/py-modules-user0092/zip/refs/heads/main", Paths.current_folder)
     shutil.move(Paths.current_folder + "py-modules-user0092-main/userfiles.py", Paths.python_lib)
     shutil.rmtree(Paths.current_folder + "py-modules-user0092-main")
