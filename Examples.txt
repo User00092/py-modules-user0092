@@ -23,9 +23,9 @@ debug = userfiles.get('settings', 'debug')
 
 # Settings.userfiles
 category:[default]:data:
-C:\Users\rhine\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk
+C:\Users\user0092\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk
 C:\Program Files\Adobe\Adobe Audition 2022\Adobe Audition.exe
-C:\Users\rhine\AppData\Roaming\Spotify\Spotify.exe
+C:\Users\user0092\AppData\Roaming\Spotify\Spotify.exe
 
 # main.py
 import userfiles
